@@ -41,7 +41,7 @@
   #question {
     padding: 30px;
     font-family: 'Orbitron', sans-serif;
-    text-align: left;
+    text-align: center;
     color: #ffffff;
     font-size: 20px;
     line-height: 25px;
@@ -51,7 +51,7 @@
     width:70%;
   }
   
-  #answer {
+  .answer {
     text-align: center;
     padding: 15px;
     color: #000000;
@@ -64,7 +64,7 @@
     width:50%;
   }
   
-  #answer:hover {
+  .answer:hover {
     color: #000000;
     background-color: #DEEFF5;
   }
@@ -79,3 +79,16 @@
   #timesUp {
     display: none;
   }
+
+  @media only screen and (max-width: 950px) {
+    .scoreboard {
+        width:200px !important;
+        padding: 5px !important;
+        font-size: 30px !important;
+        line-height: 40px !important;
+      }
+      #game, #start, #hero, #question {
+          padding: 20px !important;
+      }
+  }
+

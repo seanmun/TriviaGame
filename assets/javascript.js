@@ -9,7 +9,9 @@ $("#begin").on("click", run);
 function run() {
       clearInterval(intervalId);
       intervalId = setInterval(decrement, 1000);
-   $("#start").css("display", "none")
+   $("#start").css("display", "none");
+   $("#quiz").css("display", "block");
+
     }
 
 function decrement() {
@@ -41,5 +43,14 @@ function decrement() {
       clearInterval(intervalId);
     }
 
-    //  Execute the run function.
-    run();
+   
+    $("#eight").on("click", correct);
+    $("#nine").on("click", incorrect);
+
+    function correct() {
+        $("#completed").css("display", "block")
+    }
+
+    function incorrect() {
+        $("#timesUp").css("display", "block")
+    }
