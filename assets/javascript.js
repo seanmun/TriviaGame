@@ -4,12 +4,11 @@ var numCorrect = 0;
 var numIncorrect = 0;
 
 $("#stop").on("click", stop);
-$("#begin").on("click", run);
+$(".begin").on("click", run);
 
 function run() {
       clearInterval(intervalId);
       intervalId = setInterval(decrement, 1000);
-   $("#start").css("display", "none");
    $("#quiz").css("display", "block");
 
     }
@@ -30,8 +29,8 @@ function decrement() {
         stop();
 
         //  Alert the user that time is up.
-        $("#quiz").css("display", "none")
-        $("#timesUp").css("display", "block")
+        $("#quiz").css("display", "none");
+        $("#timesUp").css("display", "block");
         
       }
     }
@@ -46,11 +45,19 @@ function decrement() {
    
     $("#eight").on("click", correct);
     $("#nine").on("click", incorrect);
+    $("#one").on("click", incorrect);
+    $("#ten").on("click", incorrect);
 
     function correct() {
-        $("#completed").css("display", "block")
+        $("#quiz").css("display", "none");
+        $("#completed").css("display", "block");
+        $("#correct").text("Correct: " + numCorrect +1);
+        $("#incorrect").text("Inorrect: " + numIncorrect +0);
     }
 
     function incorrect() {
-        $("#timesUp").css("display", "block")
+        $("#quiz").css("display", "none");
+        $("#incompleted").css("display", "block");
+        $("#correct2").text("Correct: " + numCorrect +0);
+        $("#incorrect2").text("Inorrect: " + numIncorrect +1);
     }

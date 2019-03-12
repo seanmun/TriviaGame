@@ -70,16 +70,21 @@
   }
   
   
-  #quiz {
-    display: block;
-  }
   #completed {
+    display: none;
+  }
+  #incompleted {
     display: none;
   }
   #timesUp {
     display: none;
   }
-
+  
+  button {
+    width: 30%;
+    padding: 15px;
+    font-size: 20px;
+}
   @media only screen and (max-width: 950px) {
     .scoreboard {
         width:200px !important;
